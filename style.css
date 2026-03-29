@@ -27,7 +27,6 @@ body {
   font-family: var(--ff-body);
   font-size: 17px;
   line-height: 1.7;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,6 +68,7 @@ h2 {
 
 .hero-buttons {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
@@ -128,7 +128,7 @@ h2 {
 
 .albums {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   gap: 3em;
 }
 
