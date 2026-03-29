@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #f2ede6;
+    --bg-warm: #ede5d8;
+    --ink: #2a2118;
+    --ink-soft: #5a4e3e;
+    --moss: #4a5e3a;
+    --moss-light: #6b8050;
+    --clay: #b5724a;
+    --cream: #faf6ef;
+    --rule: #c8bfaf;
+    --ff-display: 'Playfair Display', Georgia, serif;
+    --ff-body: 'Lora', Georgia, serif;
+    --ff-mono: 'DM Mono', monospace;
+}
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--ff-body);
+    font-size: 17px;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.name {
+    font-family: var(--ff-display);
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    font-weight: 400;
+    color: var(--ink);
+}
+
+.name em {
+    font-style: italic;
+    color: var(--moss-light);
+    display: block;
+    margin-left: 100px
+}
