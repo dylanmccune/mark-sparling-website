@@ -1,125 +1,148 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --bg: #f2ede6;
-    --bg-warm: #ede5d8;
-    --ink: #2a2118;
-    --ink-soft: #5a4e3e;
-    --moss: #4a5e3a;
-    --moss-light: #6b8050;
-    --clay: #b5724a;
-    --cream: #faf6ef;
-    --rule: #c8bfaf;
-    --ff-display: 'Playfair Display', Georgia, serif;
-    --ff-body: 'Lora', Georgia, serif;
-    --ff-mono: 'DM Mono', monospace;
+  --bg: #f2ede6;
+  --bg-warm: #ede5d8;
+  --ink: #2a2118;
+  --ink-soft: #5a4e3e;
+  --moss: #4a5e3a;
+  --moss-light: #6b8050;
+  --clay: #b5724a;
+  --cream: #faf6ef;
+  --rule: #c8bfaf;
+  --ff-display: "Playfair Display", Georgia, serif;
+  --ff-body: "Lora", Georgia, serif;
+  --ff-mono: "DM Mono", monospace;
 }
 
 body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--ff-body);
-    font-size: 17px;
-    line-height: 1.7;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--ff-body);
+  font-size: 17px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main {
-    padding: 4rem 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-    max-width: 50rem;
-    container-type: inline-size;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 50rem;
+  container-type: inline-size;
 }
+
 h1 {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 h2 {
-    font-size: 4rem;
-    font-family: var(--ff-mono);
+  font-size: clamp(2rem, 10cqi, 4rem);
+  font-family: var(--ff-mono);
 }
+
 .name {
-    font-family: var(--ff-display);
-    font-size: clamp(3rem, 18cqi, 9rem);
-    line-height: 1.05;
-    font-weight: 400;
-    color: var(--ink);
+  font-family: var(--ff-display);
+  font-size: clamp(3rem, 18cqi, 9rem);
+  line-height: 1.05;
+  font-weight: 400;
+  color: var(--ink);
 }
 
 .name em {
-    font-style: italic;
-    color: var(--moss);
-    display: block;
-    margin-left: 2ch;
+  font-style: italic;
+  color: var(--moss);
+  display: block;
+  margin-left: 2ch;
 }
 
 .hero-buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
 }
 
 .btn {
-    text-decoration: none;
-    padding: .5rem 1rem;
-    position: relative;
-    overflow: hidden;
-    transition: color .3s;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s;
 }
 
 .btn::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    transform: translateX(-101%);
-    transition: transform .3s ease;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-101%);
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
 
 .btn:hover::before {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .btn-primary {
-    color: var(--cream);
+  color: var(--cream);
 }
 
 .btn-primary::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--moss);
-    z-index: -2;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--moss);
+  z-index: -2;
 }
 
 .btn-primary::before {
-    background: var(--ink);
+  background: var(--ink);
 }
 
 .btn-secondary {
-    color: var(--ink);
-    outline: 1px solid var(--ink);
-    outline-offset: -2px;
+  color: var(--ink);
+  outline: 1px solid var(--ink);
+  outline-offset: -2px;
 }
 
 .btn-secondary::before {
-    background: var(--ink);
+  background: var(--ink);
 }
 
 .btn-secondary:hover {
-    color: var(--cream);
+  color: var(--cream);
+}
+
+.albums {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3em;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-name, .album a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.album-img {
+  width: 100%;
+  height: auto;
 }
