@@ -42,7 +42,14 @@ main {
     max-width: 50rem;
     container-type: inline-size;
 }
+h1 {
+    font-size: 5rem;
+}
 
+h2 {
+    font-size: 4rem;
+    font-family: var(--ff-mono);
+}
 .name {
     font-family: var(--ff-display);
     font-size: clamp(3rem, 18cqi, 9rem);
