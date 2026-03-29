@@ -28,11 +28,23 @@ body {
     font-size: 17px;
     line-height: 1.7;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: col;
+    justify-content: center
+}
+
+main {
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    max-width: 50rem;
 }
 
 .name {
     font-family: var(--ff-display);
-    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-size: 9rem;
     line-height: 1.05;
     font-weight: 400;
     color: var(--ink);
@@ -40,7 +52,30 @@ body {
 
 .name em {
     font-style: italic;
-    color: var(--moss-light);
+    color: var(--moss);
     display: block;
     margin-left: 100px
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: .5rem 1rem;
+}
+
+.btn-primary {
+    color: var(--cream);
+    background-color: var(--moss);
+}
+
+.btn-secondary {
+    color: var(--ink);
+    outline: 1px solid var(--ink);
+    outline-offset: -2px;
 }
