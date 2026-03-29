@@ -137,7 +137,7 @@ h2 {
   flex-direction: column;
 }
 
-.album-name {
+.album a {
   text-decoration: none;
   color: var(--ink);
 }
