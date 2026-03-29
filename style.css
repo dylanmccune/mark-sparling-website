@@ -168,6 +168,12 @@ h2 {
 
 }
 
+.contact-buttons svg {
+  fill: currentColor;
+  height: 35px;
+  width: 35px;
+}
+
 .contact-buttons a:hover {
   transform: scale(110%);
 }
