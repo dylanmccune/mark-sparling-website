@@ -69,15 +69,50 @@ main {
 .btn {
     text-decoration: none;
     padding: .5rem 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: color .3s;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-101%);
+    transition: transform .3s ease;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    transform: translateX(0);
 }
 
 .btn-primary {
     color: var(--cream);
-    background-color: var(--moss);
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--moss);
+    z-index: -2;
+}
+
+.btn-primary::before {
+    background: var(--ink);
 }
 
 .btn-secondary {
     color: var(--ink);
     outline: 1px solid var(--ink);
     outline-offset: -2px;
+}
+
+.btn-secondary::before {
+    background: var(--ink);
+}
+
+.btn-secondary:hover {
+    color: var(--cream);
 }
