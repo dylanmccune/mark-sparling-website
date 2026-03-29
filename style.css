@@ -40,11 +40,12 @@ main {
     gap: 2rem;
     width: 100%;
     max-width: 50rem;
+    container-type: inline-size;
 }
 
 .name {
     font-family: var(--ff-display);
-    font-size: 9rem;
+    font-size: clamp(3rem, 18cqi, 9rem);
     line-height: 1.05;
     font-weight: 400;
     color: var(--ink);
