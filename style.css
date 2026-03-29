@@ -135,6 +135,13 @@ h2 {
 .album {
   display: flex;
   flex-direction: column;
+  padding: 0.75em;
+  margin: -0.75em;
+
+}
+
+.album:hover {
+  background: var(--bg-warm);
 }
 
 .album a {
