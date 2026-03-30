@@ -128,7 +128,7 @@ h2 {
 
 .albums {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
   gap: 3em;
 }
 
